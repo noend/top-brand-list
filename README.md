@@ -130,6 +130,22 @@ To set the Bearer token in Postman:
 2. Select `Bearer Token` as the type.
 3. Paste the token into the input field.
 
+### Changing Toplist Order
+
+To change the order of the toplist for a specific country, you need to include the `CF-IPCountry` header in your API requests. This header specifies the country code for which the toplist order should be updated.
+
+#### Example
+- Header:
+  ```
+  CF-IPCountry: BG
+  ```
+
+- For default toplist order, use the country code:
+
+    ```    
+    CF-IPCountry: XX
+    ```
+
 ## Notes
 - Ensure the database service is running before executing migrations or seeders.
 - Use `php artisan` commands for additional management tasks.
