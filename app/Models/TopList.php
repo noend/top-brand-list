@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class TopList extends Model
 {
     protected $fillable = [
-        'brand_id',
         'country_id',
+        'brand_id',
         'position',
     ];
 

@@ -13,7 +13,7 @@ class TopListController extends Controller
 
        $country = Country::where('code', $countryCode)->first();
 
-       $topList = $country->toplists()->with('brand')->orderBy('position')->get();
+       $topList = $country->toplist()->with('brand')->orderBy('position')->get();
 
        return response()->json([
            'country' => $country->code,

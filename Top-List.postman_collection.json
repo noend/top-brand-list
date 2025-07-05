@@ -1,0 +1,443 @@
+{
+	"info": {
+		"_postman_id": "cd694057-44e0-4f70-9936-4ea3c7efd12b",
+		"name": "Top List",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5690754"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Jane Doe\",\r\n  \"email\": \"jane@example.com\",\r\n  \"password\": \"secret1234\",\r\n  \"password_confirmation\": \"secret1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://top-brand-list.test/api/register",
+					"protocol": "http",
+					"host": [
+						"top-brand-list",
+						"test"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"jane@example.com\",\r\n  \"password\": \"secret1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://top-brand-list.test/api/login",
+					"protocol": "http",
+					"host": [
+						"top-brand-list",
+						"test"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Brands",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|hfdR29YH8UONWcKhFDEqII4BZ5unClASjS7gnSJg8d2fe86b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://top-brand-list.test/api/brands",
+					"protocol": "http",
+					"host": [
+						"top-brand-list",
+						"test"
+					],
+					"path": [
+						"api",
+						"brands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Country Toplist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|hfdR29YH8UONWcKhFDEqII4BZ5unClASjS7gnSJg8d2fe86b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://top-brand-list.test/api/countries/217/toplists",
+					"protocol": "http",
+					"host": [
+						"top-brand-list",
+						"test"
+					],
+					"path": [
+						"api",
+						"countries",
+						"217",
+						"toplists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Country Toplist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|hfdR29YH8UONWcKhFDEqII4BZ5unClASjS7gnSJg8d2fe86b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://top-brand-list.test/api/countries/217/toplists",
+					"protocol": "http",
+					"host": [
+						"top-brand-list",
+						"test"
+					],
+					"path": [
+						"api",
+						"countries",
+						"217",
+						"toplists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Country Toplist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|hfdR29YH8UONWcKhFDEqII4BZ5unClASjS7gnSJg8d2fe86b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"list\": [\r\n\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://top-brand-list.test/api/countries/217/toplists",
+					"protocol": "http",
+					"host": [
+						"top-brand-list",
+						"test"
+					],
+					"path": [
+						"api",
+						"countries",
+						"217",
+						"toplists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Brand",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|hfdR29YH8UONWcKhFDEqII4BZ5unClASjS7gnSJg8d2fe86b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://top-brand-list.test/api/brands/2",
+					"protocol": "http",
+					"host": [
+						"top-brand-list",
+						"test"
+					],
+					"path": [
+						"api",
+						"brands",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Brand",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|hfdR29YH8UONWcKhFDEqII4BZ5unClASjS7gnSJg8d2fe86b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand_name\": \"Brand 3\",\r\n    \"brand_image\": \"image-1.jpg\",\r\n    \"rating\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://top-brand-list.test/api/brands",
+					"protocol": "http",
+					"host": [
+						"top-brand-list",
+						"test"
+					],
+					"path": [
+						"api",
+						"brands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Brand To Country",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|hfdR29YH8UONWcKhFDEqII4BZ5unClASjS7gnSJg8d2fe86b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand_name\": \"Brand 3\",\r\n    \"brand_image\": \"image-1.jpg\",\r\n    \"rating\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://top-brand-list.test/api/brands",
+					"protocol": "http",
+					"host": [
+						"top-brand-list",
+						"test"
+					],
+					"path": [
+						"api",
+						"brands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Brand",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|hfdR29YH8UONWcKhFDEqII4BZ5unClASjS7gnSJg8d2fe86b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand_name\": \"Brand 5\",\r\n    \"brand_image\": \"image-1.jpg\",\r\n    \"rating\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://top-brand-list.test/api/brands/4",
+					"protocol": "http",
+					"host": [
+						"top-brand-list",
+						"test"
+					],
+					"path": [
+						"api",
+						"brands",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Brand",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|hfdR29YH8UONWcKhFDEqII4BZ5unClASjS7gnSJg8d2fe86b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand_name\": \"Brand 3\",\r\n    \"brand_image\": \"image-1.jpg\",\r\n    \"rating\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://top-brand-list.test/api/brands/2",
+					"protocol": "http",
+					"host": [
+						"top-brand-list",
+						"test"
+					],
+					"path": [
+						"api",
+						"brands",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -13,7 +13,7 @@ class Country extends Model
         'code',
     ];
 
-    public function toplists(): HasMany
+    public function toplist(): HasMany
     {
         return $this->hasMany(TopList::class);
     }
