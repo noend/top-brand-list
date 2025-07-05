@@ -4,19 +4,23 @@ declare(strict_types=1);
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class TopList extends Model
 {
     protected $fillable = [
         'brand_id',
         'country_id',
-        'rating',
-        'bonus',
+        'position',
     ];
 
-    public function brand()
+    public function brand(): BelongsTo
     {
-        return $this->belongsTo(Brand::class);
+        return $this->belongsTo(
+            Brand::class,
+            'brand_id',
+            'brand_id'
+        );
     }
 
     public function country()

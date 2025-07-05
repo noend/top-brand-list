@@ -24,7 +24,7 @@ class BrandRequest extends FormRequest
     {
         return [
             'brand_name' => 'required|string|unique:brands,brand_name',
-            'brand_image' => 'nullable|string',
+            'brand_image' => 'nullable|text',
             'rating' => 'nullable|integer|min:0',
         ];
     }
