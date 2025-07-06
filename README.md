@@ -20,7 +20,7 @@
 - Ensure Docker and Docker Compose are installed on your system.
 - Clone the repository:
   ```bash
-  git clone <repository-url>
+  git clone git@github.com:noend/top-brand-list.git
   cd top-brand-list
   ```
 
@@ -57,7 +57,7 @@
    ```
 
 ### Accessing the Application
-- Open your browser and navigate to `http://localhost`.
+- Open your browser and navigate to `http://localhost:8080`.
 
 ### Additional Commands
 - To stop the containers:
